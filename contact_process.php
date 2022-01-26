@@ -19,7 +19,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href ="style.css" rel="stylesheet">
-    <title> Contact With As </title>
+    <title> Contact With Us </title>
     <style>
     .button1 {
         background-color: rgb(133, 211, 117);
@@ -125,7 +125,8 @@
         if(!$con){
         die('Could not Connect to mysql:');
     }
-        $query = "INSERT INTO contact (name,lastname,email,telephone,phone,message) VALUES ('$firstname','$lastname','$email','$telephone','$phone','$message')";
+        $query = "INSERT INTO contact (name,lastname,email,telephone,phone,message) VALUES ('$firstname','$lastname','$email',
+        '$telephone','$phone','$message')";
         mysqli_query($con,$query);
         mysqli_close($con);
         echo "<h5>Η Εγγραφή ολοκληρώθηκε με επιτυχία </h5>";
@@ -140,3 +141,4 @@
     </div>
 </body>
 </html>
+

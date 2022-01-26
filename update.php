@@ -64,6 +64,7 @@
             </div>
           </nav>
           <br/>
+          <h3> Αλλαγή Κωδικού Ενός Διαχειριστή </h3>
           <form action = "update.php" method = "post">
             <table class ="table" align = "center" border = "3">
                 <tr>

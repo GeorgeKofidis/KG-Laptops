@@ -64,6 +64,7 @@
             </div>
           </nav>
           <br/>
+          <h3> Διαγραφή Ενός Διαχειριστή </h3>
           <form action = "delete.php" method = "post">
             <table class ="table" align = "center" border = "3">
                 <tr>
