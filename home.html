@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href ="style.css" rel="stylesheet">
     <title>KG-Laptops</title>
     <style>
@@ -27,21 +28,37 @@
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
-}
+      }
     .button2 {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-.header {
-  
-  text-align: center;
-  background: lightblue;
-  color: white;
-  font-size: 30px;
-  
-}
-    </style>
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+  .header {
+    text-align: center;
+    background: lightblue;
+    color: white;
+    font-size: 30px;
+  }
+  #mySidenav a {
+    position: absolute;
+    right: -170px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 200px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+  #mySidenav a:hover {
+    right: 0;
+  }
+  #contact {
+    top: 200px;
+    background-color: #555
+  }
+  </style>
 </head>
-<body class = "body">
+  <body class = "body">
     <div style="width: 100;">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -73,9 +90,21 @@
 
             <button class="button1 button2"><a href = "computer.php">Μάθετε Περισσότερα</a></button>
         </div>
-        <div style= 'float:center'>
-            <img src="dell_xps2.jpg" class="mx-auto d-block" style="width: 45%">
+        <br/>
+
+        <!-- Δεύτερο banner που κρύβεται -->
+        <div style = 'float:right' id = "mySidenav" class = "sidenav">
+            <a href = "espa.html" id = "contact"> <input type = "image" src = "e-bannerespaEΤΠΑ120X60.jpg"/>  </a>
         </div>
+
+
+        <div style= 'float:center'>
+            <img src="dell_xps2.jpg" class="mx-auto d-block" style="width: 35%">
+            <br/>
+            <!-- Banner ESPA -->
+            <a href="poiotikosafisa-1.pdf" target="_blank"><img src="e-bannerespaEΤΠΑ728X90.jpg" style ="width: 35%;" alt="My Super Awesome PDF" /></a>
+        </div>
+
         <br/>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -119,6 +148,6 @@
 		    </p>
 	    </div>
     </div>
-</body>
+  </body>
 </html>
 
