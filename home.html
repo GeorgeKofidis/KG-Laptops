@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -56,6 +56,28 @@
     top: 200px;
     background-color: #555
   }
+  .footer-espa{
+        margin-top: 2rem; width: 100%; display: flex; flex-direction: row; justify-content: left;
+    }
+    .footer-espa-init{
+        position: fixed;
+        bottom: 0;
+        z-index: 900;
+    }
+    .footer-espa-init a{
+        display: block !important; 
+        background: #ffffff !important;  
+        padding: 6px !important; 
+        border-bottom-left-radius: 0 !important; 
+        border-bottom-right-radius: 0 !important;
+    }
+    .footer-espa a{
+        display: block;  padding: 6px; border-radius: 7px; opacity:0.8;
+        transition: 0.1s all ease-in-out;
+    }
+    .footer-espa a:hover{
+        opacity:1;
+    }
   </style>
 </head>
   <body class = "body">
@@ -93,16 +115,41 @@
         <br/>
 
         <!-- Δεύτερο banner που κρύβεται -->
-        <div style = 'float:right' id = "mySidenav" class = "sidenav">
+        <!--
+            <div style = 'float:right' id = "mySidenav" class = "sidenav">
             <a href = "espa.html" id = "contact"> <input type = "image" src = "e-bannerespaEΤΠΑ120X60.jpg"/>  </a>
         </div>
+        -->
+
+        <!-- div το οποίο όσο κατεβαίνουμε κατεβαίνει και το banner -->
+
+        <div id="espa-footer-div" class="footer-espa footer-espa-init">
+          <a data-toggle="modal" data-target="#myModal">
+            <a href="poiotikosafisa-1.pdf" target="_blank">
+            <img src="e-bannerespaEΤΠΑ234X60.jpg" title="ESPA E Banner" alt="Banner">
+          </a>
+      </div>
+
+      <script>
+          window.addEventListener("scroll", (event) => {
+            let scroll = this.scrollY;
+            if(scroll >= 1700){
+              var element = document.getElementById("espa-footer-div");
+              element.classList.remove("footer-espa-init");
+            }
+            else{
+              var element = document.getElementById("espa-footer-div");
+              element.classList.add("footer-espa-init");
+          }
+        });
+    </script>
 
 
         <div style= 'float:center'>
             <img src="dell_xps2.jpg" class="mx-auto d-block" style="width: 35%">
             <br/>
             <!-- Banner ESPA -->
-            <a href="poiotikosafisa-1.pdf" target="_blank"><img src="e-bannerespaEΤΠΑ728X90.jpg" style ="width: 35%;" alt="My Super Awesome PDF" /></a>
+            <a href="espa.html" target="_self"><img src="e-bannerespaEΤΠΑ728X90.jpg" title = "ESPA" style ="width: 35%;" alt="My Super Awesome PDF" /></a>
         </div>
 
         <br/>
@@ -141,9 +188,15 @@
             </a>
         </div>
 
+        <div style= 'float:center'>
+          <img src="asus.jpg" class="mx-auto d-block" style="width: 35%">
+          <br/>
+
+          </div>
+
         <div style="background-color: lightblue; padding: 5px;text-align: center; margin-top: 80px;">
 		    <p>
-                <b> KG-Laptop International, Inc</b> <br/>
+            <b> KG-Laptop International, Inc</b> <br/>
 		        &copy; 2022 All rights reserved.
 		    </p>
 	    </div>
